@@ -1,0 +1,197 @@
+{% extends "layout_employer.html" %}
+{% block content %}
+
+  <section id="intro">
+    <div class="page-hero-section bg-image hero-home-2" style="background-image: url({{ url_for('static', filename='img/background-1/bg_hero_1.svg') }}">
+      <div class="hero-caption">
+        <div class="container fg-white h-100">
+          <div class="row align-items-center h-100">
+            <div class="col-lg-6 wow fadeInUp">
+              <!--<div class="badge badge-soft mb-2">#1 Web App in 2021</div>-->
+                <h2>Interviewing <span class="test"> Web App for </span><span id="js-rotating">COMPANIES, STARTUP'S</span></h2>
+                <p>Make your every hire count. Redirect your resources from sourcing and screening to evaluating and interviewing candidates. Our AI tools connects you to pre-verified candidates based on your requirements.</p>
+                <a href="#form-recruiter" class="btn-get-started scrollto" style=" margin-bottom: 30px;">Post a Job</a>
+
+            </div>
+            <div class="col-lg-6 d-none d-lg-block wow zoomIn">
+              <div class="img-place mobile-preview shadow floating-animate">
+                <img src="{{ url_for('static', filename='img/background-1/app_showcase.svg') }}" alt="">
+              </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="how_we_guarantee" style="margin-top:80px; margin-bottom: 50px">
+  <div class="page-section no-scroll">
+    <div class="container">
+
+      <header class="section-header">
+        <h3>How do we guarantee Ideal Candidates?</h3>
+      </header>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 py-3 wow fadeInLeft">
+              <div class="card card-body border-0 text-center shadow pt-5">
+                <div class="svg-icon mx-auto mb-4">
+                  <img src="{{ url_for('static', filename='img/background-1/payment.png') }}" alt="">
+                </div>
+                <h5 class="fg-gray">Connect with applicants</h5>
+                <p class="fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates esse.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
+              <div class="card card-body border-0 text-center shadow pt-5">
+                <div class="svg-icon mx-auto mb-4">
+                  <img src="{{ url_for('static', filename='img/background-1/customizable.png') }}" alt="">
+                </div>
+                <h5 class="fg-gray">Evaluate Skills</h5>
+                <p class="fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates esse, sunt reprehenderit</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 py-3 wow fadeInRight">
+              <div class="card card-body border-0 text-center shadow pt-5">
+                <div class="svg-icon mx-auto mb-4">
+                  <img src="{{ url_for('static', filename='img/background-1/concept.png') }}" alt="">
+                </div>
+                <h5 class="fg-gray">Shortlist with AI</h5>
+                <p class="fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates esse, sunt reprehenderit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </section>
+
+  <section class="mini" id="work-process" s>
+    <div class="mini-content">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="info">
+                        <h1>Work Process</h1>
+                        <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula ut ex. Donec ante diam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <a href="#" class="mini-box">
+                        <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
+                        <strong>Get Ideas</strong>
+                        <span>Godard pabst prism fam cliche.</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <a href="#" class="mini-box">
+                        <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
+                        <strong>Sketch Up</strong>
+                        <span>Godard pabst prism fam cliche.</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <a href="#" class="mini-box">
+                        <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
+                        <strong>Discuss</strong>
+                        <span>Godard pabst prism fam cliche.</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <a href="#" class="mini-box">
+                        <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
+                        <strong>Revise</strong>
+                        <span>Godard pabst prism fam cliche.</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <a href="#" class="mini-box">
+                        <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
+                        <strong>Approve</strong>
+                        <span>Godard pabst prism fam cliche.</span>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <a href="#" class="mini-box">
+                        <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
+                        <strong>Launch</strong>
+                        <span>Godard pabst prism fam cliche.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="clients" class="wow fadeInUp">
+  <div class="container">
+
+    <header class="section-header">
+      <h3>Our Clients</h3>
+    </header>
+
+    <div class="owl-carousel clients-carousel">
+      <img src="{{ url_for('static', filename='img/clients/client-1.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-2.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-3.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-4.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-5.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-6.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-7.png') }}" alt="">
+      <img src="{{ url_for('static', filename='img/clients/client-8.png') }}" alt="">
+    </div>
+
+  </div>
+</section>
+
+
+<section id="form-recruiter">
+  <form id="msform">
+    <ul id="progressbar">
+      <li class="active">Account Setup</li>
+      <li>Social Profiles</li>
+      <li>Personal Details</li>
+    </ul>
+  
+    <fieldset>
+      <h2 class="fs-title">Create your account</h2>
+      <h3 class="fs-subtitle">This is step 1</h3>
+      <input type="text" name="email" placeholder="Email" />
+      <input type="password" name="pass" placeholder="Password" />
+      <input type="password" name="cpass" placeholder="Confirm Password" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+  
+    <fieldset>
+      <h2 class="fs-title">Social Profiles</h2>
+      <h3 class="fs-subtitle">Your presence on the social network</h3>
+      <input type="text" name="twitter" placeholder="Twitter" />
+      <input type="text" name="facebook" placeholder="Facebook" />
+      <input type="text" name="gplus" placeholder="Google Plus" />
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+  
+    <fieldset>
+      <h2 class="fs-title">Personal Details</h2>
+      <h3 class="fs-subtitle">We will never sell it</h3>
+      <input type="text" name="fname" placeholder="First Name" />
+      <input type="text" name="lname" placeholder="Last Name" />
+      <input type="text" name="phone" placeholder="Phone" />
+      <textarea name="address" placeholder="Address"></textarea>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+  
+  </form>
+ </section> 
+
+
+ {% endblock content %}

@@ -1,0 +1,310 @@
+/*
+  REGISTER
+*/
+
+.content-section {
+    background-color: #44b6d3bd;
+    padding-top:120px;
+    padding-bottom:100px;
+}
+
+.register{
+    background: -webkit-linear-gradient(left, #3931af, #030505);
+    padding: 3%;
+}
+
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left .login-btn{
+    border: none;
+    border-radius: 1.5rem;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 8%;
+    padding-right: 8%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+
+/*
+  LOGIN
+*/
+
+/*
+.login-section img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .login-section input[type=submit] {
+    background: #fff;
+    height: 2.75rem;
+    margin: 1em auto auto;
+  }
+  
+  @media (min-width: 768px) {
+    .login-section input[type=submit] {
+      background: #fff;
+      bottom: 2.75rem;
+      left: 2.55rem;
+      height: 2.75rem;
+      padding: 0 3rem;
+      position: absolute;
+    }
+  }
+  
+  .login-section input[type=email],
+  .login-section input[type=text] {
+    height: 1.5rem;
+    margin: 0 0 1.15rem;
+    width: 100%;
+  }
+  
+  .login-section form {
+    overflow: hidden;
+    padding: 10%;
+    position: relative;
+    width: 80%;
+  }
+  
+  @media (min-width: 768px) {
+    .login-section form {
+      float: left;
+      height: 78%;
+      padding: 6%;
+      width: 38%;
+    }
+  }
+  
+  .login-section  {
+    margin: 30px auto auto;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+  }
+  
+  @media (min-width: 768px) {
+    .login-section {
+      height: 21.25rem;
+      left: 50%;
+      margin: auto;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      width: 42.5rem;
+    }
+  }
+  
+  .login-section .headline {
+    position: absolute;
+    top: 8vw;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .login-section  .headline {
+      position: absolute;
+      top: 3.4rem;
+      width: 50%;
+    }
+  }
+  
+  .login-section {
+    background: #74bdb7;
+  }
+  
+  .login-sectioninput[type=email],
+  .login-sectioninput[type=text] {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #74bdb7;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .login-section input[type=email]:required,
+  .login-section input[type=text]:required {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .login-section input[type=submit] {
+    background: #f37b56;
+    border: none;
+    color: #fff;
+    padding: 0 2rem;
+  }
+  
+  .login-section input[type=submit]:hover,
+  .login-section input[type=submit]:focus {
+    background: #f79577;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .login-section .inputs--filled label {
+    transform: translate(0, 0);
+  }
+  
+  .login-section .inputs--invalid input {
+    animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+    background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg) center right no-repeat;
+    border-bottom: 2px solid #f37b56;
+    box-shadow: none;
+    color: #f37b56;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    33% {
+      transform: translate3d(-6px, 0, 0);
+    }
+  
+    66% {
+      transform: translate3d(6px, 0, 0);
+    }
+  }
+  
+  .login-section .inputs--invalid label {
+    color: #f37b56;
+  }
+  
+  .login-section label {
+    display: inline-block;
+    transform: translate(0, 1.25rem);
+    transition: 0.15s;
+  }
+  
+  .login-section {
+    background: #f9f6ed;
+    border-radius: 0.25rem;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-section .text-headline {
+    color: #74bdb7;
+    letter-spacing: 0.4rem;
+    font: 700 1.4em 'Montserrat';
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  @media (min-width: 768px) {
+    .login-section .text-headline {
+      font: 700 1.625rem 'Montserrat';
+    }
+  }
+  
+  .login-section .text-body {
+    color: #354c58;
+    font: 700 16px 'Montserrat', sans-serif;
+  }
+  
+  .login-section .text-small-uppercase {
+    color: #74bdb7;
+    font: 700 .75rem 'Montserrat';
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+  }
+  
+  .login-section .text-subheadline {
+    color: #f37b56;
+    left: -.17rem;
+    letter-spacing: .143rem;
+    font: 700 0.652rem 'Montserrat';
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  @media (min-width: 768px) {
+    .login-section .text-subheadline {
+      font: 700 0.75rem 'Montserrat';
+    }
+  } */

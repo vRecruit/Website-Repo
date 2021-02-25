@@ -1,0 +1,212 @@
+{% extends "layout_index.html" %}
+{% block content %}
+
+  <section id="intro1" style="  background: url({{ url_for('static', filename='img/background/sample-bg1.jpg') }});background-position: center;
+  background-size: cover; background-repeat: no-repeat;">
+  <div id="fh5co-hero-wrapper">
+  <div class="container fh5co-hero-inner">
+          <div class="text-container" >
+                            <h2 style=" display: flex; justify-content: center; margin-top: 240px;">Help Center</h2>
+          </div>    
+     <img class="arrow-object" src="{{ url_for('static', filename='img/background/arrow-object-white.svg') }}" style="width:139%; margin-left: -228px; margin-bottom: -327px;" alt="">
+
+  </div>
+  </div> 
+  </section>
+
+  <section id="terms">
+      <section id="portfolio" class="clearfix" style="margin-top: 60px; box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Explore by Services</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Image Processing</li>
+              <li data-filter=".filter-card">Model Training</li>
+              <li data-filter=".filter-web">Additional Tools</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/1.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Face Recognition</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/4.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Air Canvas</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/11.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Object Detection</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/9.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Face Detector</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/7.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Reference to context</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/5.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Expression Detection</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/8.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Hands Up/Down</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/12.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Song Detector</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="{{ url_for('static', filename='img/intro-carousel/6.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Picture to Potrait</a></h4>
+                <div>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container-fluid">
+
+        <div class="section-header">
+          <h3>Still need help?</h3>
+           <p>Can't find what you're looking for?<br>Contact Us.
+          </p>
+        </div>
+
+        <div class="row wow fadeInUp">
+
+        <div class="col-lg-6">
+            <div class="map mb-4 mb-lg-0">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9490427543774!2d72.83535271470615!3d19.10989128706844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b888ae67fd%3A0xe0b9538d623ac5d2!2sMukesh%20Patel%20School%20Of%20Technology%20Management%20%26%20Engineering!5e0!3m2!1sen!2sin!4v1598610479893!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-5 info">
+                <i class="ion-ios-location-outline"></i>
+                <p> MPSTME, Maharastra, India</p>
+              </div>
+              <div class="col-md-4 info">
+                <i class="ion-ios-email-outline"></i>
+                <p><a href="mailto:contactalpha00@gmail.com">contactalpha00@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+{% endblock content %}

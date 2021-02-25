@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+      
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Online interviews made easy">
+        <meta name="keywords" content="">
+        <meta name="author" content="vRecruit">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+        <meta property="og:site_name" content="" /> 
+        <meta property="og:site" content="" /> 
+        <meta property="og:title" content=""/> 
+        <meta property="og:description" content="" /> 
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" /> 
+        <meta property="og:type" content="article" />
+      
+          {% if title %}
+              <title>vRecruit - {{ title }}</title>
+          {% else %}
+              <title>vRecruit</title>
+          {% endif %}
+      
+        <link href="{{ url_for('static', filename='img/logo/logo.png') }}" rel="icon">
+        <link href="{{ url_for('static', filename='img/logo/logo.png') }}" rel="shortcut icon" >
+      
+        <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+      
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="vRecruit">
+        <link rel="apple-touch-startup-image" href="img/logo/logo.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/logo/logo.png">
+      
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ url_for('static', filename='img/logo/logo.png') }}">
+        <meta name="theme-color" content="#ffffff"> 
+      
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+      
+       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+        <script async src="https://apis.google.com/js/api:client.js"></script>
+      
+        <link href="{{ url_for('static', filename='lib/fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/fonts/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='lib/owlcarousel/owl-carousel.css') }}">
+      
+        <link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/swiper/css/swiper.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/magnific-popup/css/magnific-popup.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/fonts/iconic/css/material-design-iconic-font.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/fonts/flaticon/flaticon.css') }}" rel="stylesheet"> 
+            
+      </head>
+
+<body>
+
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    
+       {% block main_content %}{% endblock %}
+       
+<script type="text/javascript">
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('./service-worker.js')
+    .then(function(registration) {
+        console.log('Service Worker Registered!');
+        return registration;
+    })
+    .catch(function(err) {
+        console.error('Unable to register service worker.', err);
+    });
+}
+
+// Display Message at top of homepage when offline
+window.addEventListener('online', function(e) {
+    // We could use this event to Resync data with server.
+    console.log("You are online");
+}, false);
+
+window.addEventListener('offline', function(e) {
+    // We could use this event to Queue up events for server.
+    console.log("You are offline");
+}, false);
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,575 @@
+{% extends "layout_index.html" %}
+{% block content %}
+
+  <section id="intro">
+    <div class="page-hero-section bg-image hero-home-2" style="background-image: url({{ url_for('static', filename='img/background-1/bg_hero_2.svg') }}">
+      <div class="hero-caption">
+        <div class="container fg-white h-100">
+          <div class="row align-items-center h-100">
+            <div class="col-lg-6 wow fadeInUp">
+              <h2>Interviewing <span class="test"> Web App for </span><span id="js-rotating">COMPANIES, FRESHERS, STARTUP'S, INTERNS</span></h2>
+                <a href="#pricing-plans" class="btn-get-started scrollto" style=" margin-bottom: 30px;">Get Started</a>
+
+            </div>
+            <div class="col-lg-6 d-none d-lg-block wow zoomIn">
+              <div class="img-place mobile-preview shadow floating-animate">
+                <img src="{{ url_for('static', filename='img/background-1/app_showcase.svg') }}" alt="">
+              </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="choose-option" style="margin-top:30px;">
+  <div class="section-4">
+    <div class="container">
+      <div class="row" >
+        <div class="col-md-4" style=" display: flex; justify-content: center; align-items:center; margin-left: 100px;">
+          <h3 class="h3-left-aligned-copy" style="color: black; font-weight: 700;">Explore vRecruit as</h3>
+        </div>
+        <div class="col-md-2">
+          <div class="btn-get-started" onclick="window.open('{{ url_for('employer_home') }}','_self');" style="cursor:pointer;"> 
+            <a href="{{ url_for('employer_home') }}" class="btn-link">Employer</a>
+          </div>
+        </div>
+        <div class="col-md-2" style="margin-left: 50px;">
+         <div class="btn-get-started" onclick="window.open('{{ url_for('applicant_home') }}','_self');" style="cursor:pointer;"> 
+           <a href="{{ url_for('applicant_home') }}" class="btn-link">Applicant</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+
+  <section class="section" id="about-vrecruit1" style="margin-top: -80px;">
+    <div class="container">
+
+      
+      <header class="section-header" style=" margin-bottom:50px">
+        <h3>About vRecruit</h3>
+      </header>
+
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <img src="{{ url_for('static', filename='img/background-1/left1-image.png') }}" class="rounded img-fluid d-block mx-auto" alt="App">
+            </div>
+            <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
+                <div class="left-heading">
+                    <h5>Vivamus sodales nisi id ante molestie venenatis</h5>
+                </div>
+                <div class="left-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="hr"></div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+<section class="section" id="about-vrecruit2">
+    <div class="container">
+        <div class="row">
+            <div class="left-text col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix">
+                <div class="left-heading">
+                    <h5>Curabitur aliquam eget tellus id porta</h5>
+                </div>
+                <p>Proin justo sapien, posuere suscipit tortor in, fermentum mattis elit. Aenean in feugiat purus.</p>
+                <ul>
+                    <li>
+                        <img src="{{ url_for('static', filename='img/background-1/about-icon1-01.png') }}" alt="">
+                        <div class="text">
+                            <h6>Nulla ultricies risus quis risus</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="{{ url_for('static', filename='img/background-1/about-icon1-02.png') }}" alt="">
+                        <div class="text">
+                            <h6>Donec consequat commodo purus</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="{{ url_for('static', filename='img/background-1/about-icon1-03.png') }}" alt="">
+                        <div class="text">
+                            <h6>Sed placerat sollicitudin mauris</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-image col-lg-7 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <img src="{{ url_for('static', filename='img/background-1/right1-image.png') }}" class="rounded img-fluid d-block mx-auto" alt="App">
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="about-vrecruit">
+  <div class="about">
+
+      <div class="container" class="wow fadeIn" style="margin-top: -100px;">
+        <header class="section-header" >
+          <h3>Why vRecruit?</h3>
+          <p style="color: #666666;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </header>
+
+        <div class="row row-eq-height justify-content-center">
+
+          <div class="col-lg-4 mb-4">
+            <div class="card wow bounceInUp">
+                <img src="{{ url_for('static', filename='img/background/research.svg') }}" style="align-self: center; margin-top: 10px;" height="110px" width="110px" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Lorem</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+          </div>
+
+           <div class="col-lg-4 mb-4">
+            <div class="card wow bounceInUp">
+                <img src="{{ url_for('static', filename='img/background/robust.svg') }}" style="align-self: center; margin-top: 10px;" height="110px" width="110px" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Lorem</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card wow bounceInUp">
+                <img src="{{ url_for('static', filename='img/background/model.svg') }}" style="align-self: center; margin-top: 10px;" height="110px" width="110px" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Lorem</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+   </div>
+
+ </section>
+
+ <div class="left-image-decor"></div>
+
+<section class="section" id="promotion">
+
+    <div class="container" style="margin-top: -70px; margin-bottom: 50px;">
+       <header class="section-header">
+          <h2>Features</h2>
+          <p style="color: #666666;"></p>
+        </header>      
+   </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
+                data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <img src="{{ url_for('static', filename='img/background-1/left-image.png') }}" class="rounded img-fluid d-block mx-auto" alt="App">
+            </div>
+            <div class="right-text offset-lg-1 col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix">
+                <ul>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="{{ url_for('static', filename='img/background-1/about-icon1-01.png') }}" alt="">
+                        <div class="text">
+                            <h4>Vestibulum pulvinar rhoncus</h4>
+                            <p>Please do not redistribute this template ZIP file for a download purpose. You may <a
+                            rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact</a> us for
+                        additional licensing of our template or to get a PSD file.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
+                        <img src="{{ url_for('static', filename='img/background-1/about-icon1-02.png') }}" alt="">
+                        <div class="text">
+                            <h4>Sed blandit quam in velit</h4>
+                            <p>You can <a rel="nofollow"
+                                    href="https://templatemo.com/tm-540-lava-landing-page">download Lava
+                                    Template</a> from our website. Duis viverra, ipsum et scelerisque placerat, orci
+                                magna consequat ligula.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+                        <img src="{{ url_for('static', filename='img/background-1/about-icon1-03.png') }}" alt="">
+                        <div class="text">
+                            <h4>Aenean faucibus venenatis</h4>
+                            <p>Phasellus in imperdiet felis, eget vestibulum nulla. Aliquam nec dui nec augue
+                                maximus porta. Curabitur tristique lacus.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <section id="clients" class="wow fadeIn">
+      <div class="container" style="margin-top: -50px;">
+
+        <header class="section-header">
+          <h2>Technologies Used</h2>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <a href = "https://www.tensorflow.org/"><img src="{{ url_for('static', filename='img/technologies/t1.webp') }}" alt=""></a>
+          <a href = "https://opencv.org/"><img src="{{ url_for('static', filename='img/technologies/t2.webp') }}" alt=""></a>
+          <a href = "https://www.python.org/"><img src="{{ url_for('static', filename='img/technologies/t3.webp') }}" alt=""></a>
+          <a href = "https://flask.palletsprojects.com/en/1.1.x/"><img src="{{ url_for('static', filename='img/technologies/t4.webp') }}" height = "130px" alt=""></a>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="right-image-decor"></div>
+
+    <section class="section" id="testimonials">
+      <div class="container"  style="margin-top: -70px;">
+          <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                  <div class="center-heading" >
+                      <h2>What Clients Think <em>About Us</em></h2>
+                      <p>Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod purus non, convallis odio.
+                          Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p>
+                  </div>
+              </div>
+              <div class="col-lg-10 col-md-12 col-sm-12 mobile-bottom-fix-big"
+                  data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                  <div class="owl-carousel owl-theme">
+                      <div class="item service-item">
+                          <div class="author">
+                              <i><img src="{{ url_for('static', filename='img/background-1/testimonial-author-1.png') }}" alt="Author One"></i>
+                          </div>
+                          <div class="testimonial-content">
+                              <ul class="stars">
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                              </ul>
+                              <h4>Jonathan Smart</h4>
+                              <p>“Nullam hendrerit, elit a semper pharetra, ipsum nibh tristique tortor, in tempus
+                                  urna elit in mauris.”</p>
+                              <span>Besta CTO</span>
+                          </div>
+                      </div>
+                      <div class="item service-item">
+                          <div class="author">
+                              <i><img src="{{ url_for('static', filename='img/background-1/testimonial-author-1.png') }}" alt="Second Author"></i>
+                          </div>
+                          <div class="testimonial-content">
+                              <ul class="stars">
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                              </ul>
+                              <h4>Martino Tino</h4>
+                              <p>“Morbi non mi luctus felis molestie scelerisque. In ac libero viverra, placerat est
+                                  interdum, rhoncus leo.”</p>
+                              <span>Web Analyst</span>
+                          </div>
+                      </div>
+                      <div class="item service-item">
+                          <div class="author">
+                              <i><img src="{{ url_for('static', filename='img/background-1/testimonial-author-1.png') }}" alt="Author Third"></i>
+                          </div>
+                          <div class="testimonial-content">
+                              <ul class="stars">
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                              </ul>
+                              <h4>George Tasa</h4>
+                              <p>“Fusce rutrum in dolor sit amet lobortis. Ut at vehicula justo. Donec quam dolor,
+                                  congue a fringilla sed, maximus et urna.”</p>
+                              <span>System Admin</span>
+                          </div>
+                      </div>
+                      <div class="item service-item">
+                          <div class="author">
+                              <i><img src="{{ url_for('static', filename='img/background-1/testimonial-author-1.png') }}" alt="Fourth Author"></i>
+                          </div>
+                          <div class="testimonial-content">
+                              <ul class="stars">
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                              </ul>
+                              <h4>Sir James</h4>
+                              <p>"Fusce rutrum in dolor sit amet lobortis. Ut at vehicula justo. Donec quam dolor,
+                                  congue a fringilla sed, maximus et urna."</p>
+                              <span>New Villager</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+      <section class="section colored" id="pricing-plans" style="margin-top:30px;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="center-heading">
+                      <h2 class="section-title">Pricing Plans</h2>
+                  </div>
+              </div>
+              <div class="offset-lg-3 col-lg-6" style="margin-top: -40px;">
+                  <div class="center-text">
+                      <p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus volutpat.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                  <div class="pricing-item">
+                      <div class="pricing-header">
+                          <h3 class="pricing-title">Starter</h3>
+                      </div>
+                      <div class="pricing-body">
+                          <div class="price-wrapper">
+                              <span class="currency">$</span>
+                              <span class="price">14.50</span>
+                              <span class="period">monthly</span>
+                          </div>
+                          <ul class="list">
+                              <li class="active">60 GB space</li>
+                              <li class="active">600 GB transfer</li>
+                              <li class="active">Pro Design Panel</li>
+                              <li>15-minute support</li>
+                              <li>Unlimited Emails</li>
+                              <li>24/7 Security</li>
+                          </ul>
+                      </div>
+                      <div class="pricing-footer">
+                          <a href="{{ url_for('register') }}" class="main-button">Purchase Now</a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                  <div class="pricing-item active">
+                      <div class="pricing-header">
+                          <h3 class="pricing-title">Premium</h3>
+                      </div>
+                      <div class="pricing-body">
+                          <div class="price-wrapper">
+                              <span class="currency">$</span>
+                              <span class="price">21.50</span>
+                              <span class="period">monthly</span>
+                          </div>
+                          <ul class="list">
+                              <li class="active">120 GB space</li>
+                              <li class="active">1200 GB transfer</li>
+                              <li class="active">Pro Design Panel</li>
+                              <li class="active">15-minute support</li>
+                              <li>Unlimited Emails</li>
+                              <li>24/7 Security</li>
+                          </ul>
+                      </div>
+                      <div class="pricing-footer">
+                          <a href="{{ url_for('register') }}" class="main-button">Purchase Now</a>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                  <div class="pricing-item">
+                      <div class="pricing-header">
+                          <h3 class="pricing-title">Advanced</h3>
+                      </div>
+                      <div class="pricing-body">
+                          <div class="price-wrapper">
+                              <span class="currency">$</span>
+                              <span class="price">42.00</span>
+                              <span class="period">monthly</span>
+                          </div>
+                          <ul class="list">
+                              <li class="active">250 GB space</li>
+                              <li class="active">5000 GB transfer</li>
+                              <li class="active">Pro Design Panel</li>
+                              <li class="active">15-minute support</li>
+                              <li class="active">Unlimited Emails</li>
+                              <li class="active">24/7 Security</li>
+                          </ul>
+                      </div>
+                      <div class="pricing-footer">
+                          <a href="{{ url_for('register') }}" class="main-button">Purchase Now</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+ <section id="about"  style="margin-top:50px;">
+      <div class="container">
+        <header class="section-header">
+          <h2>About Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="{{ url_for('static', filename='img/about/mission.webp') }}" style="background: #c9faff;" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-stopwatch-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+              	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="{{ url_for('static', filename='img/about/plan.webp') }}" style="background: #fff;" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="{{ url_for('static', filename='img/about/vision.webp') }}" style="background: #c9faff;" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-people-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+   <div class="container">
+        <div class="section-header wow fadeInUp" style="margin-top: 20px;">
+          <h2>Our Team</h2>
+          <br>
+        </div>
+
+         <div class="row" style=" display: flex; justify-content: center;">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="{{ url_for('static', filename='img/team/avatar.webp') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                 <h4>Nikhil Chouhan</h4>
+                  <span>Developer</span>
+                  <div class="social">
+                    <a href="https://www.instagram.com/_nikhil__chouhan__/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/in/nikhil-chouhan-5831321a1?trk=author_mini-profile_title"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="{{ url_for('static', filename='img/team/avatar1.webp') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                 <h4>Parthak Mehta</h4>
+                  <span>Developer</span>
+                  <div class="social">
+                    <a href="https://www.instagram.com/parthakmehta/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/in/parthak-mehta-36827b116?trk=author_mini-profile_title"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="{{ url_for('static', filename='img/team/avatar1.webp') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                 <h4>Parag Dharadhar</h4>
+                  <span>Developer</span>
+                  <div class="social">
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+ </section>
+
+ <section id="contact">
+     
+  <div class="page-section">
+    <div class="container">
+      <div class="section-header wow fadeInUp" style="margin-top: 10px;">
+        <h2>Need Help?</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-7 py-3 mb-5 mb-lg-0">
+          <div class="img-place w-lg-75 wow zoomIn">
+            <img src="{{ url_for('static', filename='img/background-1/illustration_contact.svg') }}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 py-3">
+          <h1 class="wow fadeInUp">Don't worry just contact us</h1>
+  
+          <form method="POST" class="mt-5">
+            <div class="form-group wow fadeInUp">
+              <label for="name" class="fw-medium fg-grey">Fullname</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+  
+            <div class="form-group wow fadeInUp">
+              <label for="email" class="fw-medium fg-grey">Email</label>
+              <input type="text" class="form-control" id="email">
+            </div>
+  
+            <div class="form-group wow fadeInUp">
+              <label for="message" class="fw-medium fg-grey">Message</label>
+              <textarea rows="6" class="form-control" id="message"></textarea>
+            </div>
+  
+            <div class="form-group mt-4 wow fadeInUp">
+              <a href="" class="main-button">Send Message</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </section>
+
+ {% endblock content %}

@@ -1,0 +1,175 @@
+{% extends "layout_applicant.html" %}
+{% block content %}
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <section id="intro">
+    <div class="page-hero-section bg-image hero-home-2" style="background-image: url({{ url_for('static', filename='img/background-1/bg_hero_1.svg') }}">
+      <div class="hero-caption">
+        <div class="container fg-white h-100">
+          <div class="row align-items-center h-100">
+            <div class="col-lg-6 wow fadeInUp">
+              <!--<div class="badge badge-soft mb-2">#1 Web App in 2021</div>-->
+              <h2>Interviewing <span class="test"> Web App for </span><span id="js-rotating">COMPANIES, STARTUP'S</span></h2>
+                <p>Make your every hire count. Redirect your resources from sourcing and screening to evaluating and interviewing candidates. Our AI tools connects you to pre-verified candidates based on your requirements.</p>
+                <a data-toggle="modal" href="" data-target="#form-recruiter" class="btn-get-started scrollto" style=" margin-bottom: 30px;">Post a Job</a>
+
+            </div>
+            <div class="col-lg-6 d-none d-lg-block wow zoomIn">
+              <div class="img-place mobile-preview shadow floating-animate">
+                <img src="{{ url_for('static', filename='img/background-1/app_showcase.svg') }}" alt="">
+              </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="face_unlock" style="display: flex; justify-content: center; align-items: center; margin-top: -120px; margin-bottom: 50px;">
+  <div class="center-content ">    
+
+      <div class="row side-by-side">
+       <div class="center-content" style="margin-top: 320px;">
+          <img id="face1" src="{{ url_for('static', filename='face/img/face.jpg') }}" class="margin" width="300px" height="300px"  />
+          <table style="display: flex; justify-content: center;">
+    <td><label for="files" class="btn" style="background:url(https://img.icons8.com/nolan/64/upload.png) no-repeat; font-size: 0px; width: 70px; height: 70px; display: block; cursor:pointer; margin-right:20px; "></label>
+            <input id="files" style="display:none;" onchange="readURL(this);" type="file"/></td>
+            <td><a href="#" id="link"  style="background:url(https://img.icons8.com/nolan/64/download.png) no-repeat; font-size: 0px; width: 70px; height: 70px; display: block; margin-left:30px;">Download</a></td>
+          </table>
+        <div class="form-group" style="display: flex; justify-content: center; margin-top: 10px; margin-bottom: 60px;">
+                  <input type="text" autocomplete="off" class="form-control " id="thres" placeholder="Enter the threshold here" data-rule="minlen:2" data-msg="Please enter the desired threshold" style="display: inline-block; width: 300px;"/>
+                   <a id="enter5" href="javascript:;" onclick="enter()" title="Enter" style="display: inline-block; margin-left: 20px; margin-top: 5px;">
+                          <i class="ion ion-android-arrow-back" style="font-size: 28px; color: black"></i>
+                        </a>
+         </div>
+        </div>
+
+    <div class="center-content">
+    <div style="position: relative; margin-left: 50px;" class="margin">
+      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+      <canvas id="overlay" />
+    </div>
+    </div>
+     </div>
+
+      <div style="margin-left: 450px; margin-top: -130px;">
+        <label for="distance"><p style="font-size: 22px; font-weight: bold; color: black; margin-top: 15px;">Threshold
+        <input disabled value="-" id="distance" type="text" class="bold" style="font-size: 20px; font-weight: bold; height: 55px; align-items: center;">
+      </div>
+
+  </div>
+  </section>
+
+  <script>
+
+    function readURL(input) {
+       if (input.files && input.files[0]) {
+           const image = new Image();
+           var reader = new FileReader();
+
+           reader.onload = function (e) {
+
+           image.src = e.target.result;
+           image.onload = () => {
+               $( '#face1' ).attr('src',image.src);
+               run(image.src);
+           };        
+        };
+         reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+    var threshold = 0.36
+    let descriptors = { desc1: null, desc2: null }
+
+    function enter() {
+      if(document.getElementById("thres").value)
+      {
+         threshold = document.getElementById("thres").value/100;
+         console.log(threshold);
+         run($('#face1').attr('src'));
+      }
+      else {
+        alert('Please enter a correct Threshold value');
+      }
+    }
+
+    function updateResult() {
+      const distance = faceapi.utils.round(
+        faceapi.euclideanDistance(descriptors.desc1, descriptors.desc2)
+      )
+      let text = distance*100
+      let bgColor = '#f5ffde'
+      if (distance > threshold) {
+        text += '% (no match)'
+        bgColor = '#ce7575'
+        console.log("Not Validated");
+      }else{
+        text += '% (match)'
+        console.log("Validated");
+      }
+      $('#distance').val(text)
+      $('#distance').css('background-color', bgColor)
+    }
+
+    async function onSelectionChanged(which, uri) {
+      const input = await faceapi.fetchImage(uri)
+      const imgEl = $(`#face${which}`).get(0)
+      imgEl.src = input.src
+      descriptors[`desc${which}`] = await faceapi.computeFaceDescriptor(input)
+    }
+
+    async function onPlay() {
+      const videoEl = $('#inputVideo').get(0)
+
+      if(videoEl.paused || videoEl.ended || !isFaceDetectionModelLoaded())
+        return setTimeout(() => onPlay())
+
+
+      const options = getFaceDetectorOptions()
+
+      const ts = Date.now()
+
+      const result = await faceapi.detectSingleFace(videoEl, options).withFaceLandmarks()
+      descriptors[`desc2`] = await faceapi.computeFaceDescriptor(videoEl,options)
+
+
+      if (result) {
+        const canvas = $('#overlay').get(0)
+        const dims = faceapi.matchDimensions(canvas, videoEl, true)
+
+        faceapi.draw.drawFaceLandmarks(canvas, faceapi.resizeResults(result, dims))
+      }
+
+      updateResult()
+
+      setTimeout(() => onPlay())
+    }
+
+    async function run(src) {
+      const MODEL_URL = '{{ url_for("static", filename="face/models") }}'
+      await  faceapi.loadFaceRecognitionModel(MODEL_URL)
+      await changeFaceDetector(TINY_FACE_DETECTOR)
+      await faceapi.loadFaceLandmarkModel(MODEL_URL)
+      $('#loader').hide()
+      const input = await faceapi.fetchImage(src)
+      const imgEl = $(`#face1`).get(0)
+      imgEl.src = input.src
+      descriptors[`desc1`] = await faceapi.computeFaceDescriptor(input)
+      changeInputSize(128)
+      const stream = await navigator.mediaDevices.getUserMedia({ video: {} })
+      const videoEl = $('#inputVideo').get(0)
+      videoEl.srcObject = stream
+      await onSelectionChanged(2, $('#selectList2 select').val())
+      updateResult()
+    }
+
+    $(document).ready(function() {
+      initFaceDetectionControls()
+      run($('#face1').attr('src'))
+    })
+
+  </script>
+
+ {% endblock content %}

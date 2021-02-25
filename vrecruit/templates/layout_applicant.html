@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block main_content %}
+
+<link href="{{ url_for('static', filename='css/style_applicant.css') }}" rel="stylesheet">
+
+    <header id="header">
+        <div class="container-fluid">
+    
+          <div id="logo" class="pull-left">
+            <h1><a href="{{ url_for('applicant_index') }}"><img src="{{ url_for('static', filename='img/logo/logo.png') }}" style="margin-right: 10px; margin-top: -10px" width ="50px" height="50px" alt="" />vRecruit</a></h1>
+            
+          </div>
+    
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+              <li class="menu-active">
+                <a href="{{ url_for('applicant_index') }}">Home</a></li>
+              <li>
+                <a href="{{ url_for('applicant_index') }}">About Us</a></li>
+              <li>
+                <a href="{{ url_for('applicant_index') }}">Contact Us</a></li>
+               <li>
+                <a href="{{ url_for('applicant_index') }}">Account</a></li>
+                <li><a href="{{ url_for('new_post') }}" >New Post</a></li>
+                <li><a href="{{ url_for('account') }}" >Account</a></li>
+                <li class="section-btn" ><a href="{{ url_for('logout') }}">Logout</a></li>
+             </ul>      
+          </nav>
+        </div>
+      </header>
+    
+      <main id="main">
+
+        {% block content %}{% endblock %}
+    
+      </main>
+    
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-3 col-md-6 footer-info">
+                <h3>vRecruit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="ion-ios-arrow-right"></i> 
+                    {% if 'index' in request.path %}
+                      <a href="#about">About Us</a></li>
+                    {% else %}
+                      <a href="{{ url_for('index') }}#about">About Us</a></li>
+                    {% endif %}
+                  <li><i class="ion-ios-arrow-right"></i> <a href="{{ url_for('help') }}">Help Center</a></li>
+                  <li><i class="ion-ios-arrow-right"></i> <a href="{{ url_for('terms') }}">Terms of service</a></li>
+                  <li><i class="ion-ios-arrow-right"></i> <a href="{{ url_for('privacy') }}">Privacy policy</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h4>Contact Us</h4>
+                <p>
+                  Mukesh Patel School Of Technology Management & Engineering <br>
+                  Vile Parle , Mumbai<br>
+                  Maharashtra 400056 <br>
+                  India <br>
+                  <strong>Email:</strong> contactvRecruit@gmail.com<br>
+                </p>
+    
+                <div class="social-links">
+                  <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+    
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-newsletter">
+                <h4>Our Newsletter</h4>
+                <p>Subscribe to our newsletter so you can be the first to find out the latest news and tips about vRecruit, as well as general updates throughout the year.</p>
+                <form action="" method="post">
+                  <input type="email" name="email"><input type="submit"  value="Subscribe">
+                </form>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong>vRecruit</strong>. All Rights Reserved
+          </div>
+        </div>
+      </footer>
+    
+<script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script> 
+<script src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.min.js') }}"></script>   
+<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/superfish/hoverIntent.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/superfish/superfish.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/owlcarousel/owl-carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/touchSwipe/jquery.touchSwipe.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/swiper/js/swiper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/popper/popper.min.js') }}"></script> 
+<script src="{{ url_for('static', filename='lib/magnific-popup/js/jquery.magnific-popup.js') }}"></script> 
+<script src="{{ url_for('static', filename='lib/morphtext/morphext.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/main_applicant.js') }}"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-storage.js"></script>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+{% endblock main_content %}
