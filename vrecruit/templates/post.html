@@ -1,23 +1,60 @@
-{% extends "layout_index.html" %}
-{% block content %}
-  <article class="media content-section">
-    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-    <div class="media-body">
-      <div class="article-metadata">
-        <a class="mr-2" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
-        <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-        {% if post.author == current_user %}
-          <div>
-            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_post', post_id=post.id) }}">Update</a>
-            <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
-          </div>
-        {% endif %}
-      </div>
-      <h2 class="article-title">{{ post.title }}</h2>
-      <p class="article-content">{{ post.content }}</p>
+{% extends "layout/layout_employer.html" %}
+{% block content %} 
+
+<style> 
+  #intro .btnRegister1{
+    float: right;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #f55858;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+  }
+  </style>
+  
+  <section id="intro">
+    <div class="page-hero-section bg-image hero-home-2" style="background-image: url({{ url_for('static', filename='img/background-1/bg_hero_1.svg') }}">
+      <div class="hero-caption">
+        <div class="container fg-white h-100">
+          <div class="row align-items-center h-100">
+
+          <article class="media content-section" >
+                        <div class="media-body">
+                  <div class="article-metadata">
+                    <a class="mr-2" href="{{ url_for('user_posts', email=post.author.email) }}">{{ post.author.your_name }}</a>
+                    <small class="text-muted" >{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                    {% if post.author == current_user %}
+                    <div>
+                      <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('update_post', post_id=post.id) }}">Update</a>
+                      <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                    </div>
+                  {% endif %}
+                  </div>
+                  <p class="article-content" style="color: black;">{{ post.job_type }}</p>
+                  <p class="article-content" style="color: black;">{{ post.no_of_openings }}</p>
+                  <p class="article-content" style="color: black;">{{ post.job_profile }}</p>
+                  <p class="article-content" style="color: black;">{{ post.date_posted }}</p>
+                  <p class="article-content" style="color: black;">{{ post.job_stipend }}</p>
+                  <p class="article-content" style="color: black;">{{ post.job_description }}</p>
+                  <p class="article-content" style="color: black;">{{ post.skills_required}}</p>
+                  <p class="article-content" style="color: black;">{{ post.job_experience }}</p>
+                  <a class="btn btn-outline-info  btnRegister1"  href="{{ url_for('interview_screen') }}">Apply for Interview</a>
+                </div>
+          </article>
+
     </div>
-  </article>
-  <!-- Modal -->
+    </div>
+  </div>
+  </div>
+  </section>
+
+    <!-- Modal -->
+
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -36,4 +73,5 @@
       </div>
     </div>
   </div>
+
 {% endblock content %}

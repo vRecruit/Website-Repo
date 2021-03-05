@@ -1,4 +1,4 @@
-{% extends "layout_index.html" %}
+{% extends "layout/layout_index.html" %}
 {% block content %}
 
   <section id="intro">
@@ -9,7 +9,7 @@
             <div class="col-lg-6 wow fadeInUp">
                 <h2>Interviewing <span class="test"> Web App for </span><span id="js-rotating">COMPANIES, STARTUP'S</span></h2>
                 <p>Make your every hire count. Redirect your resources from sourcing and screening to evaluating and interviewing candidates. Our AI tools connects you to pre-verified candidates based on your requirements.</p>
-                <a href="#pricing" class="btn-get-started scrollto" style=" margin-bottom: 30px;">Post a Job</a>
+                <a href="#pricing-plans" class="btn-get-started scrollto" style=" margin-bottom: 30px;">Get Started</a>
 
             </div>
             <div class="col-lg-6 d-none d-lg-block wow zoomIn">
@@ -40,7 +40,7 @@
                   <img src="{{ url_for('static', filename='img/background-1/payment.png') }}" alt="">
                 </div>
                 <h5 class="fg-gray">Connect with applicants</h5>
-                <p class="fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates esse.</p>
+                <p class="fs-small"></p>
               </div>
             </div>
             <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
@@ -49,7 +49,7 @@
                   <img src="{{ url_for('static', filename='img/background-1/customizable.png') }}" alt="">
                 </div>
                 <h5 class="fg-gray">Evaluate Skills</h5>
-                <p class="fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates esse, sunt reprehenderit</p>
+                <p class="fs-small"></p>
               </div>
             </div>
             <div class="col-md-6 col-lg-4 py-3 wow fadeInRight">
@@ -58,7 +58,7 @@
                   <img src="{{ url_for('static', filename='img/background-1/concept.png') }}" alt="">
                 </div>
                 <h5 class="fg-gray">Shortlist with AI</h5>
-                <p class="fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates esse, sunt reprehenderit</p>
+                <p class="fs-small"></p>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@
                 <div class="offset-lg-3 col-lg-6">
                     <div class="info">
                         <h1>Work Process</h1>
-                        <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula ut ex. Donec ante diam.</p>
+                        <p>How it works</p>
                     </div>
                 </div>
             </div>
@@ -85,43 +85,43 @@
                 <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                     <a href="#" class="mini-box">
                         <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
-                        <strong>Get Ideas</strong>
-                        <span>Godard pabst prism fam cliche.</span>
+                        <strong>Step 1</strong>
+                        <span>Employer creats a job opening.</span>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                     <a href="#" class="mini-box">
                         <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
-                        <strong>Sketch Up</strong>
-                        <span>Godard pabst prism fam cliche.</span>
+                        <strong>Step 2</strong>
+                        <span> Text to speech conversion used to ask the interviewee specified questions.</span>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                     <a href="#" class="mini-box">
                         <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
-                        <strong>Discuss</strong>
-                        <span>Godard pabst prism fam cliche.</span>
+                        <strong>Step 3</strong>
+                        <span>speech to text conversion after which, sentiment analysis is performed on the resulting text.</span>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                     <a href="#" class="mini-box">
                         <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
-                        <strong>Revise</strong>
-                        <span>Godard pabst prism fam cliche.</span>
+                        <strong>Step 4</strong>
+                        <span>output of the sentiment analysis will be used to determine the quality of the answer.</span>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                     <a href="#" class="mini-box">
                         <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
-                        <strong>Approve</strong>
-                        <span>Godard pabst prism fam cliche.</span>
+                        <strong>Step 5 </strong>
+                        <span>A list of all applicants sorted according to the score given to them is provided to the employer.</span>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                     <a href="#" class="mini-box">
                         <i><img src="{{ url_for('static', filename='img/background-1/work-process-item-01.png') }}" alt=""></i>
-                        <strong>Launch</strong>
-                        <span>Godard pabst prism fam cliche.</span>
+                        <strong>Step 6</strong>
+                        <span>The employer goes through the analysis of the applicant and selects the best suited one.</span>
                     </a>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                       </ul>
                   </div>
                   <div class="pricing-footer">
-                      <a href="#" class="main-button">Purchase Now</a>
+                      <a href="{{ url_for('register') }}" class="main-button">Purchase Now</a>
                   </div>
               </div>
           </div>
@@ -192,7 +192,7 @@
                       </ul>
                   </div>
                   <div class="pricing-footer">
-                      <a href="#" class="main-button">Purchase Now</a>
+                      <a href="{{ url_for('register') }}" class="main-button">Purchase Now</a>
                   </div>
               </div>
           </div>
@@ -218,7 +218,7 @@
                       </ul>
                   </div>
                   <div class="pricing-footer">
-                      <a href="#" class="main-button">Purchase Now</a>
+                      <a href="{{ url_for('register') }}" class="main-button">Purchase Now</a>
                   </div>
               </div>
           </div>

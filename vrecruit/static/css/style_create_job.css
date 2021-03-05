@@ -1,6 +1,3 @@
-/*
-  REGISTER
-*/
 
 .page-hero-section {
   position: relative;
@@ -16,31 +13,11 @@
   justify-content: center;
 }
 
-#intro .register-right{
-  background-image: url("../img/background-1/loginbg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-left: 0px !important;
-}
-
 #intro .register-right1{
   background-image: url("../img/background-1/loginbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 50px;
-}
-
-/*
-#intro .register-right:before {
-  content: '';
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}*/
-
-#intro .register .register-form{
-    padding: 10%;
 }
 
 #intro .register .register-form1{
@@ -49,19 +26,6 @@
   padding-bottom: 2%;
     display: flex;
     justify-content: center;
-}
-
-#intro .btnRegister{
-    float: right;
-    margin-top: 10%;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    background: #f55858;
-    color: #fff;
-    font-weight: 600;
-    width: 50%;
-    cursor: pointer;
 }
 
 #intro .btnRegister1{
@@ -74,11 +38,26 @@
   font-weight: 600;
   width: 50%;
   cursor: pointer;
+  margin-bottom: 10px;
+
+}
+
+#intro .btnRegister2 {
+  float: right;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 3%;
+  background: #f55858;
+  color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 #intro .register-heading{
     text-align: center;
-    margin-top: 8%;
+    margin-top: 5%;
     color: #fff;
     font-weight: 600;
 }
@@ -89,20 +68,4 @@
 
 #intro .label-margin {
   margin-right: 10px;
-}
-
-.not_member {
-  color: #fff;
-  margin-top:20px;
-  text-align: center;
-}
-
-.form-control-label {
-  color: #fff;
-}
-
-#intro .login-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

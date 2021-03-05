@@ -1,15 +1,20 @@
-{% extends "layout_index.html" %}
+{% extends "layout/layout_employer.html" %}
 {% block content %}
     {% for post in posts.items %}
         <article class="media content-section"  style="margin-top: 150px; margin-left: 100px; margin-right: 100px; margin-bottom: 100px;"> 
-          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+              <a class="mr-2" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.your_name }}</a>
               <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
-            <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
+            <p class="article-content">{{ post.job_type }}</p>
+            <p class="article-content">{{ post.no_of_openings }}</p>
+            <p class="article-content">{{ post.job_profile }}</p>
+            <p class="article-content">{{ post.date_posted }}</p>
+            <p class="article-content">{{ post.job_stipend }}</p>
+            <p class="article-content">{{ post.job_description }}</p>
+            <p class="article-content">{{ post.skills_required}}</p>
+            <p class="article-content">{{ post.job_experience }}</p>
           </div>
         </article>
     {% endfor %}

@@ -1,40 +1,134 @@
-{% extends "layout_index.html" %}
+{% extends "layout/layout_index.html" %}
 {% block content %}
-<div class="content-section"  style="margin-top: 150px; margin-left: 100px; margin-right: 100px; margin-bottom: 100px;">
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">{{ legend }}</legend>
-            <div class="form-group">
-                {{ form.title.label(class="form-control-label") }}
-                {% if form.title.errors %}
-                    {{ form.title(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.title.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.title(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-            <div class="form-group">
-                {{ form.content.label(class="form-control-label") }}
-                {% if form.content.errors %}
-                    {{ form.content(class="form-control form-control-lg is-invalid") }}
-                    <div class="invalid-feedback">
-                        {% for error in form.content.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    {{ form.content(class="form-control form-control-lg") }}
-                {% endif %}
-            </div>
-        </fieldset>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
-        </div>
-    </form>
+
+<link href="{{ url_for('static', filename='css/style_create_job.css') }}" rel="stylesheet">
+
+<section id="intro">
+    <div class="page-hero-section bg-image hero-home-2" style="background-image: url({{ url_for('static', filename='img/background-1/bg_hero_2.svg') }}">
+        <div class="hero-caption">
+            <div class="container fg-white h-100">
+              <div class="row register align-items-center h-100">
+             <div class="col-md-8 align-items-center register-right1">
+                <h3 class="register-heading">Post a Job</h3>
+                        <div class="row register-form1">
+                            <form method="POST" action="">
+                                {{ form.hidden_tag() }}
+                             <div class="form-row">
+                   
+                               <div class="form-group col-md-6">
+                                   {{ form.job_type.label(class="form-control-label") }}
+                                   {% if form.job_type.errors %}
+                                       {{ form.job_type(class="form-control form-control-lg is-invalid") }}
+                                       <div class="invalid-feedback">
+                                           {% for error in form.job_type.errors %}
+                                               <span>{{ error }}</span>
+                                           {% endfor %}
+                                       </div>
+                                   {% else %}
+                                       {{ form.job_type(class="form-control form-control-lg") }}
+                                   {% endif %}
+                                </div>
+                     
+                                <div class="form-group col-md-6">
+                                   {{ form.no_of_openings.label(class="form-control-label") }}
+                                   {% if form.no_of_openings.errors %}
+                                       {{ form.no_of_openings(class="form-control form-control-lg is-invalid") }}
+                                       <div class="invalid-feedback">
+                                           {% for error in form.no_of_openings.errors %}
+                                               <span>{{ error }}</span>
+                                           {% endfor %}
+                                       </div>
+                                   {% else %}
+                                       {{ form.no_of_openings(class="form-control form-control-lg") }}
+                                   {% endif %}
+                                </div>
+                   
+                               </div>
+                               
+                               <div class="form-group">
+                                   {{ form.job_profile.label(class="form-control-label") }}
+                                   {% if form.job_profile.errors %}
+                                       {{ form.job_profile(class="form-control form-control-lg is-invalid") }}
+                                       <div class="invalid-feedback">
+                                           {% for error in form.job_profile.errors %}
+                                               <span>{{ error }}</span>
+                                           {% endfor %}
+                                       </div>
+                                   {% else %}
+                                       {{ form.job_profile(class="form-control form-control-lg") }}
+                                   {% endif %}
+                                </div>
+                   
+                                <div class="form-group">
+                                   {{ form.job_description.label(class="form-control-label") }}
+                                   {% if form.job_description.errors %}
+                                       {{ form.job_description(class="form-control form-control-lg is-invalid") }}
+                                       <div class="invalid-feedback">
+                                           {% for error in form.job_description.errors %}
+                                               <span>{{ error }}</span>
+                                           {% endfor %}
+                                       </div>
+                                   {% else %}
+                                       {{ form.job_description(class="form-control form-control-lg") }}
+                                   {% endif %}
+                                </div>
+                   
+                                <div class="form-group">
+                                   {{ form.skills_required.label(class="form-control-label") }}
+                                   {% if form.skills_required.errors %}
+                                       {{ form.skills_required(class="form-control form-control-lg is-invalid") }}
+                                       <div class="invalid-feedback">
+                                           {% for error in form.skills_required.errors %}
+                                               <span>{{ error }}</span>
+                                           {% endfor %}
+                                       </div>
+                                   {% else %}
+                                       {{ form.skills_required(class="form-control form-control-lg") }}
+                                   {% endif %}
+                                </div>
+                   
+                               <div class="form-row">
+                   
+                                   <div class="form-group col-md-6">
+                                       {{ form.job_stipend.label(class="form-control-label") }}
+                                       {% if form.job_stipend.errors %}
+                                           {{ form.job_stipend(class="form-control form-control-lg is-invalid") }}
+                                           <div class="invalid-feedback">
+                                               {% for error in form.job_stipend.errors %}
+                                                   <span>{{ error }}</span>
+                                               {% endfor %}
+                                           </div>
+                                       {% else %}
+                                           {{ form.job_stipend(class="form-control form-control-lg") }}
+                                       {% endif %}
+                                    </div>
+                   
+                                    <div class="form-group col-md-6">
+                                       {{ form.job_experience.label(class="form-control-label") }}
+                                       {% if form.job_experience.errors %}
+                                           {{ form.job_experience(class="form-control form-control-lg is-invalid") }}
+                                           <div class="invalid-feedback">
+                                               {% for error in form.job_experience.errors %}
+                                                   <span>{{ error }}</span>
+                                               {% endfor %}
+                                           </div>
+                                       {% else %}
+                                           {{ form.job_experience(class="form-control form-control-lg") }}
+                                       {% endif %}
+                                    </div>
+                   
+                               </div>
+                   
+                                   <div class="form-group">
+                                       {{ form.submit(class="btn btn-outline-info  btnRegister1") }}
+                                   </div>
+                           </form>
+                </div>
+    </div>
 </div>
+</div>
+</div>
+</div>
+</section>
+
 {% endblock content %}
